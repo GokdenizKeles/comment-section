@@ -1,0 +1,234 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Rubik';
+  background: #F5F6FA;
+
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cartflex {
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #67727E;
+
+}
+
+.cartflex a {
+ color: #5357B6;
+ font-weight: 500;
+}
+
+.cart {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.cart-inner {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ max-width: 325px;
+ margin-inline: auto;
+}
+
+.cart-profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 16px;
+
+  span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #67727E;
+  }
+  
+  h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.96px;
+  color: #334253;    
+  }
+}
+
+.container-inner {
+  padding: 32px 16px;
+}
+
+.cart-footer {
+  display: flex;
+  margin-block: 16px;
+  justify-content: space-between;
+  
+  button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  }
+}
+
+.delete-warning {
+  margin: auto;
+  border: none;
+  width: 343px;
+  border-radius: 8px;
+}
+
+.delete-inner {
+  background: #FFFFFF;
+  padding: 24px 27px;
+  
+  h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.7px;
+  color: #334253;
+  padding-bottom: 16px;
+ }
+
+ p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #67727E;
+ }
+}
+
+.escape-btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding: 12px 22px;
+  background: #67727E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.user-wait-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.confirm-btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  background: #ED6368;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+dialog::backdrop {
+  opacity: 50%;
+  background: #000000;
+}
+
+.score-collector {
+  display: flex;
+  gap: 13px;
+  padding: 10px 15px;
+  background: #F5F6FA;
+  border-radius: 10px;
+  align-items: center;
+
+  span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.96px;
+  color: #5357B6;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.current-user-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.replies {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  border-left: 2px hsl(223,19%,93%) solid;
+  
+}
+
+.cart-inner > .replies {
+  margin-top: -1rem; 
+}
+
+.cart + .replies {
+  margin-top: 1rem; 
+  padding-top: 0;
+}
